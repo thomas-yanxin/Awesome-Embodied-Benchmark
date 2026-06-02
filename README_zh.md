@@ -22,7 +22,7 @@
 
 | 任务类型 | 描述 | Benchmark 数量 |
 |----------|------|----------------|
-| **具身问答** | 针对具身场景的视觉问答 | 14+ |
+| **具身问答** | 针对具身场景的视觉问答 | 15+ |
 | **具身导航** | 基于目标或指令的环境导航 | 5+ |
 | **具身任务规划** | 将复杂任务分解为可执行步骤 | 3+ |
 
@@ -101,6 +101,22 @@
 **分类**: 机器人操作 / 长程推理 / 多模态 / 真实世界
 
 **License**: Apache 2.0
+
+---
+
+#### IndustryEQA
+
+- **论文**: [arXiv:2505.20640](https://arxiv.org/abs/2505.20640)
+- **GitHub**: [JackYFL/IndustryEQA](https://github.com/JackYFL/IndustryEQA)
+- **HuggingFace**: [IndustryEQA/IndustryEQA](https://huggingface.co/datasets/IndustryEQA/IndustryEQA)
+
+**简介**: 首个面向安全关键仓储场景的具身问答 Benchmark。基于 NVIDIA Isaac Sim 构建，提供包含工业资产、动态工作人员和危险情境的情景记忆视频，并附带直接答案与推理答案标注。
+
+**分类**: 工业场景具身问答 / 安全关键推理 / 时序理解 / 空间理解
+
+**数据规模**: 1,344 组问答（小型仓库 971 + 大型仓库 373），16.4 GB
+
+**License**: MIT
 
 ---
 
@@ -417,6 +433,21 @@ python -m embodiedbench.main env=eb-hab model_name=gpt-4o-mini exp_name='baselin
 
 ## 评估平台
 
+### EmbodiedEval
+
+- **论文**: [arXiv:2501.11858](https://arxiv.org/abs/2501.11858)
+- **GitHub**: [thunlp/EmbodiedEval](https://github.com/thunlp/EmbodiedEval)
+- **HuggingFace**: [EmbodiedEval/EmbodiedEval](https://huggingface.co/datasets/EmbodiedEval/EmbodiedEval)
+- **项目主页**: [embodiedeval.github.io](https://embodiedeval.github.io/)
+
+**简介**: 一个用于评估多模态大语言模型作为具身智能体的综合交互式 Benchmark。它在统一仿真框架中覆盖 125 个 3D 场景、328 个任务，涉及导航、物体交互、社会交互、属性问答和空间问答。
+
+**分类**: 统一交互评估 / 导航 + 交互 + 空间问答 / 3D 仿真
+
+**使用方式**: 提供开源模拟器、可下载基准数据、基线智能体和指标脚本，支持端到端评估。
+
+**License**: CC0-1.0 数据集 / MIT 代码
+
 ### Embodied Arena
 
 - **论文**: [arXiv:2509.15273](https://arxiv.org/abs/2509.15273)
@@ -444,6 +475,21 @@ python -m embodiedbench.main env=eb-hab model_name=gpt-4o-mini exp_name='baselin
 - EB-Habitat (高层级，Habitat-Sim)
 - EB-Navigation (低层级，Habitat-Sim)
 - EB-Manipulation (低层级，CoppeliaSim/PyRep)
+
+### StaticEmbodiedBench
+
+- **论文**: [arXiv:2508.06553](https://arxiv.org/abs/2508.06553)
+- **HuggingFace**: [xiaojiahao/StaticEmbodiedBench](https://huggingface.co/datasets/xiaojiahao/StaticEmbodiedBench)
+
+**简介**: 一个即插即用的具身评测 Benchmark，用静态场景表示替代高成本的交互式评测。完整基准覆盖 42 个场景和 8 个核心维度，公开版本提供 200 条样本以支持开放研究。
+
+**分类**: 静态评估 / 宏观规划 / 微观感知 / 阶段性推理
+
+**使用方式**: 由 VLMEvalKit 原生支持，提供 `StaticEmbodiedBench` 和 `StaticEmbodiedBench_circular` 两种评测模式。
+
+**License**: MIT
+
+**数据规模**: 200 条公开样本，231 MB
 
 ## 贡献指南
 
@@ -483,6 +529,6 @@ python -m embodiedbench.main env=eb-hab model_name=gpt-4o-mini exp_name='baselin
 
 ## 许可证
 
-[Apache License 2.0](./LICENE)
+[Apache License 2.0](./LICENSE)
 
 在法律允许的范围内，贡献者已放弃本作品的所有版权和相关或邻接权。

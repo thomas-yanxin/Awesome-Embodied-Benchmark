@@ -22,7 +22,7 @@ Embodied AI benchmarks evaluate the capabilities of foundation models in perceiv
 
 | Task Type | Description | Benchmark Count |
 |-----------|-------------|-----------------|
-| **Embodied Q&A** | Visual question answering about embodied scenes | 14+ |
+| **Embodied Q&A** | Visual question answering about embodied scenes | 15+ |
 | **Embodied Navigation** | Navigating environments based on goals or instructions | 5+ |
 | **Embodied Task Planning** | Decomposing complex tasks into executable steps | 3+ |
 
@@ -101,6 +101,22 @@ Embodied AI benchmarks evaluate the capabilities of foundation models in perceiv
 **Category**: Robot Manipulation / Long-horizon Reasoning / Multimodal / Real World
 
 **License**: Apache 2.0
+
+---
+
+#### IndustryEQA
+
+- **Paper**: [arXiv:2505.20640](https://arxiv.org/abs/2505.20640)
+- **GitHub**: [JackYFL/IndustryEQA](https://github.com/JackYFL/IndustryEQA)
+- **HuggingFace**: [IndustryEQA/IndustryEQA](https://huggingface.co/datasets/IndustryEQA/IndustryEQA)
+
+**Description**: The first benchmark dedicated to embodied question answering in safety-critical warehouse scenarios. Built on NVIDIA Isaac Sim, it provides episodic-memory videos with industrial assets, dynamic human workers, and hazardous situations, plus direct-answer and reasoning annotations.
+
+**Category**: Industrial EQA / Safety-critical Reasoning / Temporal Understanding / Spatial Understanding
+
+**Data Size**: 1,344 QA pairs (971 small-warehouse + 373 large-warehouse), 16.4 GB
+
+**License**: MIT
 
 ---
 
@@ -417,6 +433,21 @@ Based on [Embodied Arena](https://arxiv.org/abs/2509.15273), embodied capabiliti
 
 ## Evaluation Platforms
 
+### EmbodiedEval
+
+- **Paper**: [arXiv:2501.11858](https://arxiv.org/abs/2501.11858)
+- **GitHub**: [thunlp/EmbodiedEval](https://github.com/thunlp/EmbodiedEval)
+- **HuggingFace**: [EmbodiedEval/EmbodiedEval](https://huggingface.co/datasets/EmbodiedEval/EmbodiedEval)
+- **Project**: [embodiedeval.github.io](https://embodiedeval.github.io/)
+
+**Description**: A comprehensive interactive benchmark for evaluating MLLMs as embodied agents. It spans 328 tasks across 125 3D scenes and covers navigation, object interaction, social interaction, attribute QA, and spatial QA in one simulation framework.
+
+**Category**: Unified Interactive Evaluation / Navigation + Interaction + Spatial QA / 3D Simulation
+
+**Usage**: Includes an open-source simulator, downloadable benchmark data, baseline agents, and metric scripts for end-to-end evaluation.
+
+**License**: CC0-1.0 dataset / MIT code
+
 ### Embodied Arena
 
 - **Paper**: [arXiv:2509.15273](https://arxiv.org/abs/2509.15273)
@@ -444,6 +475,21 @@ Based on [Embodied Arena](https://arxiv.org/abs/2509.15273), embodied capabiliti
 - EB-Habitat (High-Level, Habitat-Sim)
 - EB-Navigation (Low-Level, Habitat-Sim)
 - EB-Manipulation (Low-Level, CoppeliaSim/PyRep)
+
+### StaticEmbodiedBench
+
+- **Paper**: [arXiv:2508.06553](https://arxiv.org/abs/2508.06553)
+- **HuggingFace**: [xiaojiahao/StaticEmbodiedBench](https://huggingface.co/datasets/xiaojiahao/StaticEmbodiedBench)
+
+**Description**: A plug-and-play benchmark that replaces expensive interactive evaluation with static scene representations. The full benchmark covers 42 scenarios and 8 core dimensions, while the public release exposes a 200-sample subset for open research.
+
+**Category**: Static Evaluation / Macro Planning / Micro Perception / Stage-wise Reasoning
+
+**Usage**: Supported by VLMEvalKit with `StaticEmbodiedBench` and `StaticEmbodiedBench_circular` evaluation modes.
+
+**License**: MIT
+
+**Data Size**: 200 public samples, 231 MB
 
 ## Contributing
 
